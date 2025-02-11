@@ -3,63 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Assets/Favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e08ed7ffaa.js" crossorigin="anonymous"></script>
     <title>ExpoArte</title>
 </head>
 <body>
     <!-- HEADER -->
-     <header id="event-subscription">
+    <header id="event-subscription">
         <div id="disclaimer">
-            <h2>HUE.</h2>
-            <p class="about-event">UM EVENTO PARA DESPERTAR A SUA CRIATIVIDADE</p>
-            <p>Data do evento:</p>
-            <p class="event-date">Domingo, 30 de Julho, a partir 11h</p>
-            <div class="subscription-form">
-                <p>Preencha o formulário para receber os detalhes do evento</p>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" placeholder="Digite aqui...">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" placeholder="Digite aqui...">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefone:</label>
-                        <input type="text" placeholder="Digite aqui...">
-                    </div>
-                    <input type="submit" class="btn" value="QUERO ME INSCREVER">
-                </form>
+            <div id="left">
+                <div class="logo"><img src="Assets/logo.png" alt="logo hue"></div>
+                <p class="about-event">UM EVENTO PARA DESPERTAR A SUA CRIATIVIDADE</p>
+                <p class="event-preview">Data do evento:</p>
+                <p class="event-date">Quarta, 30 de Julho, a partir 11h</p>
+            </div>
+            <div id="right">
+                <div id="subscription-form">
+                    <p>PREENCHA O FORMULÁRIO PARA RECEBER OS DETALHES DO EVENTO</p>
+                <div class="right">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">NOME:</label>
+                            <input type="text" placeholder="Digite aqui...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-MAIL:</label>
+                            <input type="email" placeholder="Digite aqui...">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">TELEFONE:</label>
+                            <input type="text" placeholder="Digite aqui...">
+                        </div>
+                        <input type="submit" class="btn" value="QUERO ME INSCREVER">
+                    </form>
+                </div>
             </div>
         </div>
-     </header>
+        </div>
+    </header>
 
-     <!-- SECTION -->
-      <section id="key-benefits">
+    <!-- SECTION -->
+    <section id="key-benefits">
         <h2>Explore a lista de artistas:</h2>
         <div class="benefits">
             <div class="benefit">
-                <div id="benefit-1" class="benefit-img"></div>
+                <a href="https://pt.wikipedia.org/wiki/Leonardo_da_Vinci">
+                    <div id="benefit-1" class="benefit-img"></div>
+                </a>
                 <p>Leonardo DaVinci</p>
             </div>
             <div class="benefit">
-                <div id="benefit-2" class="benefit-img"></div>
+                <a href="https://pt.wikipedia.org/wiki/Vincent_van_Gogh">
+                    <div id="benefit-2" class="benefit-img"></div>
+                </a>
                 <p>Vincent Van Gogh</p>
             </div>
             <div class="benefit">
-                <div id="benefit-3" class="benefit-img"></div>
+                <a href="https://pt.wikipedia.org/wiki/Michelangelo">
+                    <div id="benefit-3" class="benefit-img"></div>
+                </a>
                 <p>Michelangelo</p>
             </div>
         </div>
-      </section>
+    </section>
 
-      <!-- SECTION -->
-       <section id="location">
-        <div id="adress">
+    <!-- SECTION -->
+    <section id="location">
+        <div id="address">
             <i class="fa-solid fa-pen-nib" width="48" height="48"></i>
-            <div id="adress-details">
+            <div id="address-details">
                 <p>Rua das Cores Vibrantes, 157</p>
                 <p>Bairro dos Artistas, Cidade </p>
                 <p>Criativa, São Paulo - SP</p>
@@ -68,14 +81,15 @@
         </div>
         <div id="about-location">
             <h3>LOCAL DE DESTAQUE</h3>
-            <p>O evento será realizado na galeria mais famosa da cidade, no centro.</p>
+            <p>O evento será realizado na galeria</p> 
+            <p>mais famosa da cidade, no centro.</p>
         </div>
        </section>
 
        <!-- SECTION -->
         <section id="details">
             <div class="detail" id="detail-1">
-                <img src="Assets/noite.png" alt="noite estrelada">
+                <a href="https://pt.wikipedia.org/wiki/A_Noite_Estrelada"><img src="Assets/noite.png" alt="noite estrelada"></a>
                 <div class="detail-description">
                     <h3>“Pintar é libertar-se, e isso é o essencial.”</h3>
                     <h4>-PABLO PICASSO</h4>
@@ -93,10 +107,10 @@
                         <li>A Criação de Adão - Michelangelo</li>
                     </ul>
                 </div>
-                <img src="Assets/ceia.png" alt="ceia">
+                <a href="https://pt.wikipedia.org/wiki/A_Última_Ceia_(Leonardo_da_Vinci)"><img src="Assets/ceia.png" alt="ceia"></a>
             </div>
             <div class="detail" id="detail-3">
-                <img src="Assets/adam.png" alt="criacao de adao">
+                <a href="https://pt.wikipedia.org/wiki/A_Criação_de_Adão"><img src="Assets/adam.png" alt="criacao de adao"></a>
                 <div class="detail-description">
                     <h3>EXPERIÊNCIA:</h3>
                     <p>A exposição envolve os sentidos, com luzes, sombras e obras que despertam reflexão e emoção, criando uma experiência única e transformadora. Cada peça revela algo novo, tornando o tempo quase imperceptível.</p>
@@ -112,7 +126,7 @@
 
          <!-- FOOTER -->
           <footer id="footer">
-            <h3>HUE.</h3>
+            <h3>Hue.</h3>
             <p>Exposição de Arte</p>
             <p><span>ENTRE EM CONTATO:</span>fanyy@email.com</p>
             <p><span>OU PELO TELEFONE:</span>(19)99999-0999</p>
