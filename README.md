@@ -16,6 +16,6 @@ Comecei o projeto pelo planejamento, criando um manual de marca e um protótipo 
 <img width="126" alt="image" src="https://github.com/user-attachments/assets/75b9a9a3-099d-4a2e-bb32-f693ca0783f9" />
 <img width="101" alt="image" src="https://github.com/user-attachments/assets/f21200bf-9a25-4fc1-bdb4-7404ba096548" />
 
-Se você quer ver o resultado, clique nesse [vídeo](Resultado.mp4)!
+Se você quer ver o resultado, clique nesse [vídeo](Resultados.mp4)!
 
 
