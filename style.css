@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alatsi&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');   
+
 
 :root{
+
+    /* COLORS */
     --background: #F6F4F0;
     --black: #00010D;
     --blue: #0E1626;
     --grey: #D9D9D9;
     --darkgrey: #A6A59F;
+    --greyishblue: #4D5159;
+    --hover: #21345a;
+
+    /* FONT */
+    --title: "Abril Fatface", serif;
+
 }
 
 *{
@@ -15,9 +24,33 @@
     margin: 0;
     padding: 0;
 }
+
+#left {
+    float: left;
+    margin-right: 8em;
+}
+
+#right {
+    float: right;
+    color: var(--black);
+    background-color: var(--background);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#disclaimer img{
+    width: 20em;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+#disclaimer img:hover{
+    transform: scale(1.1);
+}
+
 /* EVENT FORM */
 #event-subscription{
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-image: url(Assets/fundo.png);
     background-position: center;
     background-size: cover;
@@ -28,41 +61,40 @@
     color: var(--background);
 }
 
-#disclaimer h2,
-#disclaimer .event-date{
-    color: var(--background);
-}
-
-#disclaimer h2{
-    font-size: 3em;
-    margin-bottom: 1em;
-}
-
-#disclaimer .about-event{
+#left .about-event{
     font-size: 2em;
     max-width: 350px;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 
-#disclamer p{
+#disclaimer p{
     font-size: 1.2em;
     margin-bottom: 0,3em;
 }
 
+#disclaimer .event-preview{
+    margin-bottom: 0.5em;
+}
+
 #disclaimer .event-date{
     font-weight: bold;
+    color: var(--black);
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 5px;
+    width: 13em;
 }
 
 #subscription-form{
-    background-color: var(--background);
-    padding: 2em;
-    max-width: 22%;
+    padding: 1em;
 }
 
 #subscription-form p{
-    font-size: 1.5em;
-    color: var(--background);
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--black);
     margin-bottom: 1em;
 }
 
@@ -73,9 +105,8 @@
 }
 
 .form-group label {
-    color: var(--background);
+    color: var(--black);
     margin-bottom: 0.3em;
-    font-weight: bold;
 }
 
 .form-group input,
@@ -87,22 +118,24 @@
 }
 
 .btn{
-    background-color: var(--background);
+    background-color: var(--black);
+    border-radius: 10px;
     color: var(--background);
     width: 100%;
     padding: 12px;
     border: none;
     cursor: pointer;
-    opacity: 0.8;
+    margin-top: 1em;
+    transition: 0.2s;
 }
 
-.btn-hover{
-    opacity: 1;
+.btn:hover{
+    background-color: #21345a;
 }
 
-/* BENEFICTS SECTION */
+/* BENEFITS SECTION */
 #key-benefits h2{
-    background-color: var(--background);
+    background-color: var(--darkgrey);
     text-align: center;
     padding: 2em;
     font-weight: 500;
@@ -116,7 +149,341 @@
     margin: 0 auto;
 }
 
+.benefits p{
+    font-family: var(--title);
+    font-size: 1.5em;
+}
+
 .benefit{
     text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20%;
+    color: var(--black);
+    transition: transform 0.2s;
+    cursor: pointer;
 }
+
+.benefit:hover{
+    transform: scale(1.1);
+}
+
+.benefit .benefit-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1em;
+}
+
+#benefit-1 {
+    background-image: url(Assets/leo.png);
+}
+
+#benefit-2 {
+    background-image: url(Assets/vangogh.png);
+}
+
+#benefit-3 {
+    background-image: url(Assets/michelangelo.png);
+}
+
+/* Event Location */
+
+#location{
+    height:400px;
+    background-color: #0E1626;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--background);
+    margin-bottom: 3em;
+}
+
+#address,
+#about-location{
+    max-width: 30%;
+}
+
+#address{
+    display: flex;
+    align-items: center;
+}
+
+#address i{
+    color: var(--background);
+    font-size: 4em;
+    margin-right: 0.5em;
+}
+
+#address-details{
+    text-align: center;
+    font-size: 1.6em;
+}
+
+#address-details p:last-child{
+    margin-top: 1.5px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+#about-location{
+    background-color: var(--greyishblue);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#about-location h3{
+    color: var(--background);
+    font-size: 2.5em;
+}
+
+#about-location:hover{
+    background-color: #060a13;
+    transform: scale(1.1);
+}
+
+#about-location p{
+    font-size: 1.3em;
+    flex-wrap: nowrap;
+}
+
+/* Event details container */
+
+#details{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.detail{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5%;
+    margin-bottom: 4em;
+}
+
+.detail img{
+    /* width: 50% */
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.detail img:hover{
+    transform: scale(1.1);
+}
+
+.detail h3{
+    font-size: 2em;
+    font-weight: 500;
+    font-family: var(--title);
+}
+
+#detail-1 h3{
+    margin-top: 2em;
+    font-size: 2.7em;
+}
+#detail-1 h4{
+    font-weight: lighter;
+    float: inline-end;
+    font-size: 1.5em;
+}
+
+#detail-2 h3{
+    margin-top: 1em;
+    font-size: 2.7em;
+}
+#detail-2 li{
+    font-size: 1.3em;
+}
+
+#detail-3 h3{
+    margin-top: 1.3em;
+    font-size: 2.7em;
+}
+
+#detail-3 p{
+    font-size: 1.5em;
+}
+
+.detail-description{
+    width: 100%;
+    padding-left: 2em;
+}
+
+#detail-3 .detail-description{
+    justify-self: flex-start;
+}
+
+.detail-description ul{
+    list-style-position: inside;
+}
+
+.detail-description ul li{
+    margin-bottom: 0.4em;
+}
+
+#cta {
+    height: 300px;
+    background: url(Assets/earlady.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--background);
+}
+
+#cta h3{
+    font-size: 2em;
+    font-weight: 500;
+    background-color: #00010d00;
+}
+
+#cta .btn {
+    width: 30%;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+/* FOOTER */
+
+#footer{
+    text-align: center;
+    color: var(--black);
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+#footer h3{
+    font-size: 4em;
+    font-family: var(--title);
+}
+
+#footer p:nth-child(2){
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+#footer span{
+    font-weight: bold;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+    html{
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+    /* Event form */
+    #event-subscription{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #disclaimer{
+        padding: 2em;
+    }
+
+    #disclaimer h2{
+        margin-bottom: 0.5em;
+    }
+
+    #subscription-form{
+        max-width: 70%;
+        margin-bottom: 2em;
+    }
+
+    /* Benefits section */
+    .benefits{
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 2em;
+    }
+    .benefit{
+        max-width: 100%;
+        margin-bottom: 2em;
+    }
+
+    /* Event location */
+    #location{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 2em 0;
+    }
+
+    #address {
+        order: 2;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    #address i{
+        margin: 0.3em 0;
+    }
+
+    #about-location{
+        order: 1;
+        max-width: 100%;
+    }
+
+    #about-location h3{
+        margin-bottom: 0;
+    }
+
+    #about-location p{
+        display: flex;
+    }
+
+    /* Event details container */
+    .detail{
+        flex-direction: column;
+        margin-bottom: 0.5em;
+        gap: 0;
+    }
+
+    .detail img{
+        width: 100%;
+        margin: 2em 0;
+    }
+
+    #detail-1 img{
+        display: none;
+    }
+
+    .detail-description{
+        padding: 0;
+    }
+
+    #detail-3 .detail-description{
+        order: 1;
+    }
+
+    /* Call to Action Section */
+
+    #cta h3{
+        font-size: 1em;
+    }
+    #cta .btn {
+        width: 80%;
+    }
+}
+
